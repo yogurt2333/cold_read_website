@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ColdRead is an AI x Web3 verifiable audit trail for GLM-5.1 prediction market agents."
+    />
+    <title>ColdRead | AI x Web3 Verifiable Audit Trail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500;600&family=Inter:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ColdRead home">
+        <span class="brand-mark">C</span>
+        <span>ColdRead</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#workflow">Workflow</a>
+        <a href="#proof">Proof</a>
+        <a href="#run">Run</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Z.AI Track / Web3 x Long-Horizon Task</p>
+          <h1>AI 决策不是黑箱，而是一条可验证审计链路。</h1>
+          <p class="lead">
+            ColdRead 用 GLM-5.1（智谱模型）长程 Agent（智能体）分析真实
+            Polymarket（预测市场）盘口，记录任务拆解、工具调用、自我修复与审计
+            hash，并准备 Sepolia（测试网）链上锚点。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/CyberAngel0226/cold_read" target="_blank" rel="noreferrer">
+              Open GitHub
+            </a>
+            <a class="button secondary" href="https://github.com/CyberAngel0226/cold_read/releases/tag/v0.3.0-hackathon" target="_blank" rel="noreferrer">
+              View Release
+            </a>
+          </div>
+        </div>
+
+        <aside class="terminal" aria-label="ColdRead CLI preview">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>demo:agent --pretty</strong>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-title">COLDREAD</p>
+            <p><span class="ok">✓</span> Step 1 任务拆解 / Plan task</p>
+            <p><span class="ok">✓</span> Step 2 读取真实盘口 / Fetch live market</p>
+            <p><span class="ok">✓</span> Step 3 生成轨迹草稿 / Draft trace</p>
+            <p><span class="warn">!</span> Step 4 轨迹校验失败 / Trace validation failed</p>
+            <p><span class="ok">✓</span> Step 5 自我修复 / Self repair</p>
+            <p><span class="ok">✓</span> Step 6 计算哈希并准备锚点 / Prepare anchor</p>
+            <div class="terminal-proof">
+              <span>Trace Hash</span>
+              <code>2ad57cbc33ecaa236...a4ad8b763</code>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="strip" aria-label="Project metrics">
+        <div>
+          <strong>6</strong>
+          <span>Long-horizon steps</span>
+        </div>
+        <div>
+          <strong>1</strong>
+          <span>Validation repair</span>
+        </div>
+        <div>
+          <strong>0 ETH</strong>
+          <span>Sepolia calldata anchor</span>
+        </div>
+        <div>
+          <strong>HOLD</strong>
+          <span>Risk-bound final action</span>
+        </div>
+      </section>
+
+      <section class="section split" id="problem">
+        <div>
+          <p class="eyebrow">Problem</p>
+          <h2>普通 AI 分析只给答案，ColdRead 给证据链。</h2>
+        </div>
+        <p>
+          当 AI Agent（智能体）给出预测市场建议时，用户很难知道它看了什么证据、
+          哪一步出错、是否修复，以及最终材料有没有被篡改。ColdRead 把这些过程
+          变成 Agent Run Trace（智能体运行轨迹）、Trace Hash（轨迹哈希）和链上
+          Audit Anchor（审计锚点）。
+        </p>
+      </section>
+
+      <section class="section" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2>GLM-5.1 驱动的 6 步可审计流程</h2>
+        </div>
+        <div class="workflow-grid">
+          <article>
+            <span>01</span>
+            <h3>Plan task</h3>
+            <p>GLM-5.1 拆解盘口审计任务，制定多步骤计划。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Fetch live market</h3>
+            <p>读取真实 Polymarket 盘口材料，并保留来源链接。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Draft trace</h3>
+            <p>生成第一版 Agent Run Trace，记录行动、工具和观察。</p>
+          </article>
+          <article class="warning-card">
+            <span>04</span>
+            <h3>Validate failed</h3>
+            <p>校验器发现 externalRiskFlags 缺失，拒绝进入审计载荷。</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Self repair</h3>
+            <p>Agent 补齐风险字段，并将建议降级为 HOLD。</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Prepare anchor</h3>
+            <p>计算 Trace Hash，并准备 Sepolia calldata 审计锚点。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section proof-section" id="proof">
+        <div class="section-heading">
+          <p class="eyebrow">Verifiable Proof</p>
+          <h2>链下保存完整材料，链上锚定最小 hash 引用。</h2>
+        </div>
+        <div class="proof-grid">
+          <article>
+            <h3>Trace Hash</h3>
+            <code>2ad57cbc33ecaa236a671390614cbe560...</code>
+            <p>Agent Run Trace 的稳定审计摘要。</p>
+          </article>
+          <article>
+            <h3>Calldata</h3>
+            <code>0x2ad57cbc33ecaa236a671390614cbe...</code>
+            <p>准备写入 Sepolia 的最小审计证据。</p>
+          </article>
+          <article>
+            <h3>Agent Run Record</h3>
+            <code>demo/agent-run-record.latest.json</code>
+            <p>完整记录每一步工具调用、观察、修复和最终交付。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section run-section" id="run">
+        <div>
+          <p class="eyebrow">Run Locally</p>
+          <h2>一条命令复现演示路径。</h2>
+          <p>
+            没有 API key 时使用明确标记的 cached replay（缓存回放）；配置
+            ZAI_API_KEY 后可运行 live GLM-5.1（实时智谱模型）流程。
+          </p>
+        </div>
+        <pre><code>npm install
+npm run test
+npm run build
+npm run demo:agent -- --market new-rhianna-album-before-gta-vi-926 --pretty</code></pre>
+      </section>
+
+      <section class="section links-section">
+        <div class="section-heading">
+          <p class="eyebrow">Submission Materials</p>
+          <h2>评委复查入口</h2>
+        </div>
+        <div class="link-list">
+          <a href="https://github.com/CyberAngel0226/cold_read" target="_blank" rel="noreferrer">
+            GitHub Repository
+          </a>
+          <a href="https://github.com/CyberAngel0226/cold_read/releases/tag/v0.3.0-hackathon" target="_blank" rel="noreferrer">
+            v0.3.0 Hackathon Release
+          </a>
+          <a href="https://github.com/CyberAngel0226/cold_read/blob/main/docs/demo-script.md" target="_blank" rel="noreferrer">
+            Demo Script
+          </a>
+          <a href="https://github.com/CyberAngel0226/cold_read/blob/main/README.md" target="_blank" rel="noreferrer">
+            Chinese README
+          </a>
+        </div>
+      </section>
+
+      <section class="section boundary">
+        <p class="eyebrow">Boundary</p>
+        <h2>MVP 做审计，不做自动交易。</h2>
+        <p>
+          ColdRead 当前不执行真实 Polymarket 交易，也没有自动操作 Cobo（钱包）。
+          V2 会加入 Investment Plan（投资计划）和 Cobo Wallet Executor（Cobo 钱包执行器），
+          在用户设置的风险预算和人工确认边界内执行小额操作。
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>ColdRead</span>
+      <span>AI x Web3 Verifiable Audit Trail</span>
+    </footer>
+  </body>
+</html>
