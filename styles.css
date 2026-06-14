@@ -372,6 +372,16 @@ code {
   overflow-wrap: anywhere;
 }
 
+.video-section video {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border: 1px solid rgba(118, 217, 255, 0.24);
+  border-radius: 8px;
+  background: #030506;
+  box-shadow: var(--shadow);
+}
+
 .run-section {
   display: grid;
   grid-template-columns: 0.78fr 1.22fr;
